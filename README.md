@@ -6,8 +6,9 @@
   
   1. Bisection Method
   2. False Position Method
-  3. Newton-Raphson Method
-  4. Secant Method
+  3. Simple Fixed Point Iteration
+  4. Newton-Raphson Method
+  5. Secant Method
 
   **Numerical Integration:**
   
