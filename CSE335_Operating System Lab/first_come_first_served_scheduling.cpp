@@ -1,62 +1,93 @@
-#include <bits/stdc++.h>
+#include<bits/stdc++.h>
 using namespace std;
- 
-const int N=100005;
- 
+
+const int N = 100005;
 int n;
-struct process
-{
-    int id;
-    int burst_time;
-    int arrival_time;
-    int waiting_time;
-    int finishing_time;
-    int turn_around_time;
+
+struct process {
+	int id; // process id
+	int at; // arrival time
+	int bt; // burst time
+
+	int ct; // completion time
+	int tat; // turnaround time
+	int wt; // waiting time
+	int rt; // response time
 };
 process P[N];
- 
- 
-void FCFS()
+
+void first_come_first_served()
 {
-    double total_waiting_time = 0.0;
-    double total_turn_around_time = 0.0;
-    for(int i=0; i<n; i++)
-    {
-        P[i].finishing_time = P[i-1].finishing_time + P[i].burst_time;
-        P[i].turn_around_time = P[i].finishing_time - P[i].arrival_time;
-        P[i].waiting_time = P[i].turn_around_time - P[i].burst_time;
- 
-        total_waiting_time += P[i].waiting_time;
-        total_turn_around_time += P[i].turn_around_time;
-    }
-    cout<<fixed<<setprecision(2);
-    cout<<"Average Waiting Time: "<<(total_waiting_time/n)<<"\n";
-    cout<<"Average Turn Around Time: "<<(total_turn_around_time/n)<<"\n";
-    return;
+	int i;
+	int complete = 0;
+	int current_time = 0;
+	int index = -1;
+	int minimum = INT_MAX;
+
+	int total_tat = 0;
+	int total_wt = 0;
+
+	while (complete < n)
+	{
+		for (i = 0; i < n; i++)
+		{
+			if (P[i].ct == 0 && P[i].at <= current_time)
+			{
+				if (P[i].at < minimum)
+				{
+					minimum = P[i].at;
+					index = i;
+				}
+			}
+		}
+
+		if (index >= 0)
+		{
+			complete++;
+			current_time += P[index].bt;
+			P[index].ct = current_time;
+			P[index].tat = P[index].ct - P[index].at;
+			P[index].wt = P[index].tat - P[index].bt;
+
+			total_tat += P[index].tat;
+			total_wt += P[index].wt;
+
+			index = -1;
+			minimum = INT_MAX;
+		}
+		else
+			current_time++;
+	}
+
+	for (i = 0; i < n; i++)
+		printf("---- %d %d %d\n", P[i].ct, P[i].tat, P[i].wt);
+
+	printf("Average turnaround time %lf\n", total_tat/(n*1.0));
+	printf("Average waiting time %lf\n", total_wt/(n*1.0));
 }
- 
- 
+
 int main()
 {
-    cout<<"Number of Processes: ";
-    cin>>n;
- 
-    cout<<"Process Ids:\n";
-    for(int i=0; i<n; i++) cin>>P[i].id;
- 
-    cout<<"Process Burst Times:\n";
-    for(int i=0; i<n; i++) cin>>P[i].burst_time;
- 
-    cout<<"Process Arrival Times:\n";
-    for(int i=0; i<n; i++) cin>>P[i].arrival_time;
- 
-    FCFS();
- 
-    return 0;
+	int i;
+	cin>> n;
+
+	for (i = 0; i < n; i++)
+	{
+		cin>> P[i].id >> P[i].at >> P[i].bt;
+	}
+
+	first_come_first_served();
+
+	return 0;
 }
+
 /**
-3
-1 2 3
-24 3 3
-0 0 0
+Ref: Educativesite.com
+
+4 
+1 0 2
+2 1 1
+3 2 8
+4 3 5
+
 */
