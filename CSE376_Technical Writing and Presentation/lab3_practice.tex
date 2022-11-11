@@ -1,0 +1,121 @@
+\documentclass [a4paper, 12pt] {report}
+
+\begin{document}
+
+\title{LaTeX Table}
+\author{Jakir Hasan}
+\date{\today}
+\maketitle
+
+\pagenumbering{roman}
+\tableofcontents
+\listoftables
+\newpage
+\pagenumbering{arabic}
+
+\setcounter{chapter}{1}
+\chapter*{Practical 3: Tables}
+\addcontentsline{toc}{chapter}{Practical 3: Tables}
+
+% First section
+\section{Table}
+
+% First table
+\begin{tabular}{ | l | l | }
+Apples & Green \\
+Strawberries & Red \\
+Oranges & Orange \\
+
+\end{tabular}
+
+\vspace{15mm}
+
+%Second table
+\begin{tabular} {r c }
+
+Apples & Green \\
+\hline
+Strawberries & Red \\
+\cline{1-1}
+Oranges & Orange \\
+
+\end{tabular}
+
+\vspace{15mm}
+
+%Third table
+\begin{tabular} {| r | l | }
+
+\hline
+8 & here's \\
+\cline{2-2}
+86 & stuff \\
+\hline
+\hline
+2008 & now \\
+\hline
+
+\end{tabular}
+
+\vspace{15mm}
+
+\section {Multi-column and multi-row cells}
+
+% Table with multiple rows and columns
+\begin{tabular}{| c | c | c | c |}
+
+\hline
+\multicolumn{4}{|c|}{Country List} \\
+\hline
+Country Name & ALPHA 2 Code & ALPHA 3 Code & Numeric Code \\
+\hline
+Afghanistan & AF & AFG & 004 \\
+Albania & AL & ALB & 008 \\
+Algeria & DZ & DZA & 012 \\
+Angola & AO & AGO & 024 \\
+\hline
+
+\end{tabular}
+
+\vspace{15mm}
+
+\section{Checkpoint 3}
+
+% First table of checkpoint
+\begin{table}
+\begin{tabular}{ l | r | r}
+
+Item & Quantity & Price (\$) \\
+\hline
+Nails & 500 & 0.34 \\
+Wooden boards & 100 & 4.00 \\
+Bricks & 240 & 11.50 \\
+
+\end{tabular}
+\caption{Items}
+\label{item}
+\end{table}
+
+\vspace{15mm}
+
+% Second table of checkpoint
+\begin{table}
+\begin{tabular}{ l | c c c }
+
+\multicolumn{1}{ l |}{} &
+\multicolumn{3}{c}{Year}\\
+\cline{2-4}
+City & 2006 & 2007 & 2008 \\
+\hline
+London & 45789 & 46551 & 51298 \\
+Berlin & 34549 & 32543 & 29870 \\
+Paris & 49835 & 51009 & 51970 \\
+
+\end{tabular}
+\caption{City}
+\label{city}
+\end{table}
+
+Table \ref{item} contains informations about different items and table \ref{city} contains informations about cities.
+
+\end{document}
