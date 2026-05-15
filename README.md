@@ -9,5 +9,6 @@
   * [2017 - Report - 4/2](https://drive.google.com/drive/folders/14u5_2-KzliAbNj79QV8crL3PCCp3diny?fbclid=IwAR11aWJLJYe7pauQw97CDvYqyGHEUK2YB8m0T9sVMP1wdmECHGPEg-mLGWc)
  
 ## Additional Resources
+* [Basic Geometric formulas](https://wc.edu/current-students/files/PDF-LINK_M-G2_Geometric_Formulas.pdf)
 
 ***By, Jakir Hasan, Batch-18***
