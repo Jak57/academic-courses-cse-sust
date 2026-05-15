@@ -11,5 +11,6 @@
 ## Additional Resources
 * [Basic Geometric formulas](https://wc.edu/current-students/files/PDF-LINK_M-G2_Geometric_Formulas.pdf)
 * Python basics (Kaggle): https://www.kaggle.com/learn/python
+* SQL basics (HackerRank): https://www.hackerrank.com/domains/sql
 
 ***By, Jakir Hasan, Batch-18***
