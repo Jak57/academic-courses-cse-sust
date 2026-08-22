@@ -8,6 +8,9 @@
   * [2019](https://drive.google.com/drive/u/0/folders/15L_xmIn9aPhMIRVgd7RQklZaIksBVY3d?fbclid=IwAR1RHbNEFDom8Oln0-YEB2mQtOQVVBDzYXezpsQg9ODMBWb4Bn1nu7VMsIg)
   * [2017 - Report - 4/2](https://drive.google.com/drive/folders/14u5_2-KzliAbNj79QV8crL3PCCp3diny?fbclid=IwAR11aWJLJYe7pauQw97CDvYqyGHEUK2YB8m0T9sVMP1wdmECHGPEg-mLGWc)
  
+## Notes by Jakir Hasan
+* Notes: [Drive link](https://drive.google.com/drive/folders/1u1aBKqWIJxbUZY3EzmB33v8pRA6DC9Wm?usp=sharing)
+ 
 ## Additional Resources
 * [Basic Geometric formulas](https://wc.edu/current-students/files/PDF-LINK_M-G2_Geometric_Formulas.pdf)
 * Python basics (Kaggle): https://www.kaggle.com/learn/python
